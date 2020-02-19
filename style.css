@@ -1,0 +1,29 @@
+#output {
+  margin-top: 5em;
+}
+
+body.night-theme {
+  background-color: #2b2b2b;
+}
+
+body.night-theme h1, body.night-theme p, body.night-theme h2, body.night-theme label {
+  color: #ff7800
+}
+
+body.night-theme input, body.night-theme textarea {
+  background: grey;
+}
+
+body.night-theme hr {
+  color: blue;
+}
+
+button.night-theme {
+  color: #ff7800;
+  background-color: #2b2b2b;
+  border-color: #ff7800;
+}
+
+button.day-theme {
+  background-color: white;
+}

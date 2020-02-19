@@ -56,4 +56,27 @@ phone.addEventListener('input', function () {
   updatePreview()
 })
 
-var themeButton = document.getElementById('theme-button')
+// I tried passing this function into the click event listeners below, which dayThemeButton passing in 'day-theme'
+// and night theme button passing in 'night-theme', but for some reason when I had it like that, BOTH functions were
+// called immediately on opening the window, as if the two buttons were clicked.
+
+// function setTheme(theme) {
+//   document.body.setAttribute('class', theme)
+//   window.alert(theme + ' has been set')
+// }
+
+var theme = window.localStorage.getItem('theme')
+document.body.setAttribute('class', theme)
+
+var dayThemeButton = document.getElementById('day-theme-button')
+var nightThemeButton = document.getElementById('night-theme-button')
+
+dayThemeButton.addEventListener('click', () => {
+  document.body.setAttribute('class', 'day-theme')
+  window.localStorage.setItem('theme', 'day-theme')
+})
+
+nightThemeButton.addEventListener('click', () => {
+  document.body.setAttribute('class', 'night-theme')
+  window.localStorage.setItem('theme', 'night-theme')
+})
